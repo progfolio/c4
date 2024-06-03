@@ -69,7 +69,7 @@
          :buffer "*c4-server*"
          :command (list (concat invocation-directory invocation-name)
                         "-l" (locate-library "imp")
-                        "-l" (or load-file-name (buffer-file-name))
+                        "-l" (locate-library "c4")
                         "-q"
                         "--fg-daemon=c4"
                         "--eval" "(setq c4--server-p t)"
